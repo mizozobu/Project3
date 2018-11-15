@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53FDBBA7C0DF8A69DCF1F548 /* Pods_Project_3_Sou_Mizobuchi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B24DA766940B15CD79949D7E /* Pods_Project_3_Sou_Mizobuchi.framework */; };
+		699384A5219D031900AC242E /* geocode.js in Resources */ = {isa = PBXBuildFile; fileRef = 6993849C219D031800AC242E /* geocode.js */; };
+		699384A6219D031900AC242E /* Scripture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6993849D219D031800AC242E /* Scripture.swift */; };
+		699384A7219D031900AC242E /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6993849E219D031800AC242E /* String+Extensions.swift */; };
+		699384A8219D031900AC242E /* ScriptureRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6993849F219D031800AC242E /* ScriptureRenderer.swift */; };
+		699384A9219D031900AC242E /* scripture.css in Resources */ = {isa = PBXBuildFile; fileRef = 699384A0219D031800AC242E /* scripture.css */; };
+		699384AA219D031900AC242E /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699384A1219D031800AC242E /* Book.swift */; };
+		699384AB219D031900AC242E /* GeoPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699384A2219D031800AC242E /* GeoPlace.swift */; };
+		699384AC219D031900AC242E /* geo.21.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 699384A3219D031900AC242E /* geo.21.sqlite */; };
+		699384AD219D031900AC242E /* GeoDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699384A4219D031900AC242E /* GeoDatabase.swift */; };
 		69C07BD0219B2CB600FA934A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C07BCF219B2CB600FA934A /* AppDelegate.swift */; };
 		69C07BD2219B2CB600FA934A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C07BD1219B2CB600FA934A /* ViewController.swift */; };
 		69C07BD5219B2CB600FA934A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69C07BD3219B2CB600FA934A /* Main.storyboard */; };
@@ -15,13 +25,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		69C07BCC219B2CB600FA934A /* Project 3 Sou Mizobuchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project 3 Sou Mizobuchi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6934B78C219B314100F4FF47 /* Project 3 Sou Mizobuchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project 3 Sou Mizobuchi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6993849C219D031800AC242E /* geocode.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = geocode.js; sourceTree = "<group>"; };
+		6993849D219D031800AC242E /* Scripture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scripture.swift; sourceTree = "<group>"; };
+		6993849E219D031800AC242E /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		6993849F219D031800AC242E /* ScriptureRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptureRenderer.swift; sourceTree = "<group>"; };
+		699384A0219D031800AC242E /* scripture.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = scripture.css; sourceTree = "<group>"; };
+		699384A1219D031800AC242E /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		699384A2219D031800AC242E /* GeoPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoPlace.swift; sourceTree = "<group>"; };
+		699384A3219D031900AC242E /* geo.21.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = geo.21.sqlite; sourceTree = "<group>"; };
+		699384A4219D031900AC242E /* GeoDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoDatabase.swift; sourceTree = "<group>"; };
 		69C07BCF219B2CB600FA934A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69C07BD1219B2CB600FA934A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		69C07BD4219B2CB600FA934A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		69C07BD6219B2CB900FA934A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69C07BD9219B2CB900FA934A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69C07BDB219B2CB900FA934A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B24DA766940B15CD79949D7E /* Pods_Project_3_Sou_Mizobuchi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_3_Sou_Mizobuchi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D28A538C3DD3A193D5717F22 /* Pods-Project 3 Sou Mizobuchi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project 3 Sou Mizobuchi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project 3 Sou Mizobuchi/Pods-Project 3 Sou Mizobuchi.debug.xcconfig"; sourceTree = "<group>"; };
+		EB6CCB0586F3E11AD460C368 /* Pods-Project 3 Sou Mizobuchi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project 3 Sou Mizobuchi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project 3 Sou Mizobuchi/Pods-Project 3 Sou Mizobuchi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,39 +51,100 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53FDBBA7C0DF8A69DCF1F548 /* Pods_Project_3_Sou_Mizobuchi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E75AABBF969E8FA6CD5867A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D28A538C3DD3A193D5717F22 /* Pods-Project 3 Sou Mizobuchi.debug.xcconfig */,
+				EB6CCB0586F3E11AD460C368 /* Pods-Project 3 Sou Mizobuchi.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		699384AE219D033200AC242E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				699384A1219D031800AC242E /* Book.swift */,
+				699384A4219D031900AC242E /* GeoDatabase.swift */,
+				699384A2219D031800AC242E /* GeoPlace.swift */,
+				6993849D219D031800AC242E /* Scripture.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		699384AF219D036A00AC242E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				69C07BD8219B2CB900FA934A /* LaunchScreen.storyboard */,
+				69C07BD3219B2CB600FA934A /* Main.storyboard */,
+				699384B1219D03AE00AC242E /* HTML */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		699384B0219D037100AC242E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				699384A3219D031900AC242E /* geo.21.sqlite */,
+				6993849E219D031800AC242E /* String+Extensions.swift */,
+				69C07BD6219B2CB900FA934A /* Assets.xcassets */,
+				69C07BDB219B2CB900FA934A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		699384B1219D03AE00AC242E /* HTML */ = {
+			isa = PBXGroup;
+			children = (
+				6993849C219D031800AC242E /* geocode.js */,
+				699384A0219D031800AC242E /* scripture.css */,
+				6993849F219D031800AC242E /* ScriptureRenderer.swift */,
+			);
+			path = HTML;
+			sourceTree = "<group>";
+		};
+		699384B2219D03D200AC242E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				69C07BD1219B2CB600FA934A /* ViewController.swift */,
+				69C07BCF219B2CB600FA934A /* AppDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		69C07BC3219B2CB600FA934A = {
 			isa = PBXGroup;
 			children = (
 				69C07BCE219B2CB600FA934A /* Project 3 Sou Mizobuchi */,
-				69C07BCD219B2CB600FA934A /* Products */,
+				6934B78C219B314100F4FF47 /* Project 3 Sou Mizobuchi.app */,
+				5E75AABBF969E8FA6CD5867A /* Pods */,
+				AAD98A565256B45C61DA8316 /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		69C07BCD219B2CB600FA934A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				69C07BCC219B2CB600FA934A /* Project 3 Sou Mizobuchi.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		69C07BCE219B2CB600FA934A /* Project 3 Sou Mizobuchi */ = {
 			isa = PBXGroup;
 			children = (
-				69C07BCF219B2CB600FA934A /* AppDelegate.swift */,
-				69C07BD1219B2CB600FA934A /* ViewController.swift */,
-				69C07BD3219B2CB600FA934A /* Main.storyboard */,
-				69C07BD6219B2CB900FA934A /* Assets.xcassets */,
-				69C07BD8219B2CB900FA934A /* LaunchScreen.storyboard */,
-				69C07BDB219B2CB900FA934A /* Info.plist */,
+				699384AE219D033200AC242E /* Model */,
+				699384B2219D03D200AC242E /* Controller */,
+				699384AF219D036A00AC242E /* View */,
+				699384B0219D037100AC242E /* Supporting Files */,
 			);
 			path = "Project 3 Sou Mizobuchi";
+			sourceTree = "<group>";
+		};
+		AAD98A565256B45C61DA8316 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B24DA766940B15CD79949D7E /* Pods_Project_3_Sou_Mizobuchi.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +154,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69C07BDE219B2CB900FA934A /* Build configuration list for PBXNativeTarget "Project 3 Sou Mizobuchi" */;
 			buildPhases = (
+				286529FE402498B2337A6915 /* [CP] Check Pods Manifest.lock */,
 				69C07BC8219B2CB600FA934A /* Sources */,
 				69C07BC9219B2CB600FA934A /* Frameworks */,
 				69C07BCA219B2CB600FA934A /* Resources */,
+				CFDB9F36A0184BDA05410187 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -81,7 +166,7 @@
 			);
 			name = "Project 3 Sou Mizobuchi";
 			productName = "Project 3 Sou Mizobuchi";
-			productReference = 69C07BCC219B2CB600FA934A /* Project 3 Sou Mizobuchi.app */;
+			productReference = 6934B78C219B314100F4FF47 /* Project 3 Sou Mizobuchi.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -108,7 +193,7 @@
 				Base,
 			);
 			mainGroup = 69C07BC3219B2CB600FA934A;
-			productRefGroup = 69C07BCD219B2CB600FA934A /* Products */;
+			productRefGroup = 69C07BC3219B2CB600FA934A;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -125,18 +210,66 @@
 				69C07BDA219B2CB900FA934A /* LaunchScreen.storyboard in Resources */,
 				69C07BD7219B2CB900FA934A /* Assets.xcassets in Resources */,
 				69C07BD5219B2CB600FA934A /* Main.storyboard in Resources */,
+				699384A5219D031900AC242E /* geocode.js in Resources */,
+				699384A9219D031900AC242E /* scripture.css in Resources */,
+				699384AC219D031900AC242E /* geo.21.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		286529FE402498B2337A6915 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Project 3 Sou Mizobuchi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFDB9F36A0184BDA05410187 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Project 3 Sou Mizobuchi/Pods-Project 3 Sou Mizobuchi-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GRDB.swift/GRDB.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRDB.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Project 3 Sou Mizobuchi/Pods-Project 3 Sou Mizobuchi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		69C07BC8219B2CB600FA934A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				699384A7219D031900AC242E /* String+Extensions.swift in Sources */,
+				699384A8219D031900AC242E /* ScriptureRenderer.swift in Sources */,
+				699384AA219D031900AC242E /* Book.swift in Sources */,
 				69C07BD2219B2CB600FA934A /* ViewController.swift in Sources */,
+				699384AD219D031900AC242E /* GeoDatabase.swift in Sources */,
 				69C07BD0219B2CB600FA934A /* AppDelegate.swift in Sources */,
+				699384A6219D031900AC242E /* Scripture.swift in Sources */,
+				699384AB219D031900AC242E /* GeoPlace.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,10 +413,11 @@
 		};
 		69C07BDF219B2CB900FA934A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D28A538C3DD3A193D5717F22 /* Pods-Project 3 Sou Mizobuchi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q35A6578N7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Project 3 Sou Mizobuchi/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -298,10 +432,11 @@
 		};
 		69C07BE0219B2CB900FA934A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB6CCB0586F3E11AD460C368 /* Pods-Project 3 Sou Mizobuchi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q35A6578N7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Project 3 Sou Mizobuchi/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

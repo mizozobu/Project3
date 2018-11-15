@@ -1,0 +1,67 @@
+a:link, a:hover, a:visited, a:active {
+    color: blue;
+}
+
+a {
+    text-decoration: none;
+}
+
+a[name] {
+    color: black;
+}
+
+body {
+    font: -apple-system-body;
+    margin: 0;
+    padding: .5em .3em 4em .4em;
+    background-color: #ffffff;
+    color: #201500;
+}
+
+.big {
+    font-size: 125%;
+}
+
+.chapter {
+    margin: .6em;
+}
+
+.footVerse {
+}
+
+.headVerse {
+    font-style: italic;
+    margin-bottom: .8em;
+}
+
+.heading1 {
+    font-size: 120%;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin: .4em;
+}
+
+.heading2 {
+    font-size: 105%;
+    font-weight: bold;
+    text-align: center;
+    margin: .4em;
+}
+
+.match {
+    background-color: #ffffbb;
+}
+
+.note {
+    text-align: center;
+}
+
+.verse {
+    margin-top: .4em;
+    margin-bottom: .4em;
+}
+
+.verseNumber {
+    padding-right: .4em;
+}
