@@ -26,6 +26,7 @@
 		69C07BD5219B2CB600FA934A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69C07BD3219B2CB600FA934A /* Main.storyboard */; };
 		69C07BD7219B2CB900FA934A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69C07BD6219B2CB900FA934A /* Assets.xcassets */; };
 		69C07BDA219B2CB900FA934A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69C07BD8219B2CB900FA934A /* LaunchScreen.storyboard */; };
+		69DACF87219DC5E600221566 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69DACF86219DC5E600221566 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		69C07BD6219B2CB900FA934A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69C07BD9219B2CB900FA934A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69C07BDB219B2CB900FA934A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69DACF86219DC5E600221566 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B24DA766940B15CD79949D7E /* Pods_Project_3_Sou_Mizobuchi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_3_Sou_Mizobuchi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D28A538C3DD3A193D5717F22 /* Pods-Project 3 Sou Mizobuchi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project 3 Sou Mizobuchi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project 3 Sou Mizobuchi/Pods-Project 3 Sou Mizobuchi.debug.xcconfig"; sourceTree = "<group>"; };
 		EB6CCB0586F3E11AD460C368 /* Pods-Project 3 Sou Mizobuchi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project 3 Sou Mizobuchi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project 3 Sou Mizobuchi/Pods-Project 3 Sou Mizobuchi.release.xcconfig"; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69DACF87219DC5E600221566 /* MapKit.framework in Frameworks */,
 				699384C6219D16E800AC242E /* WebKit.framework in Frameworks */,
 				53FDBBA7C0DF8A69DCF1F548 /* Pods_Project_3_Sou_Mizobuchi.framework in Frameworks */,
 			);
@@ -162,6 +165,7 @@
 		AAD98A565256B45C61DA8316 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				69DACF86219DC5E600221566 /* MapKit.framework */,
 				699384C5219D16E800AC242E /* WebKit.framework */,
 				B24DA766940B15CD79949D7E /* Pods_Project_3_Sou_Mizobuchi.framework */,
 			);

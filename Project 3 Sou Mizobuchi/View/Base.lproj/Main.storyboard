@@ -17,10 +17,27 @@
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="DetailVC" id="0Mb-8U-zZc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="satelliteFlyover" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VbQ-zI-leO">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <connections>
+                                    <outlet property="delegate" destination="aqc-Jf-LrW" id="eMi-P6-lWz"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="E0Q-ut-KpF" firstAttribute="bottom" secondItem="VbQ-zI-leO" secondAttribute="bottom" id="21Q-co-UWF"/>
+                            <constraint firstItem="VbQ-zI-leO" firstAttribute="leading" secondItem="E0Q-ut-KpF" secondAttribute="leading" id="isu-hu-ScL"/>
+                            <constraint firstItem="E0Q-ut-KpF" firstAttribute="trailing" secondItem="VbQ-zI-leO" secondAttribute="trailing" id="mpe-Dk-gke"/>
+                            <constraint firstItem="VbQ-zI-leO" firstAttribute="top" secondItem="E0Q-ut-KpF" secondAttribute="top" id="uPh-Ja-LqJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="E0Q-ut-KpF"/>
                     </view>
                     <navigationItem key="navigationItem" id="7gl-mT-EQp"/>
+                    <connections>
+                        <outlet property="mapView" destination="VbQ-zI-leO" id="f9L-5Z-Q4C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9DX-El-h8T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
