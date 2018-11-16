@@ -28,6 +28,10 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
         
         webView.navigationDelegate = self
         webView.loadHTMLString(html, baseURL: nil)
+        
+        if let mapVC = mapViewController {
+            mapVC.configureMap(geoplaces)
+        }
     }
     
     override func viewDidLayoutSubviews() {

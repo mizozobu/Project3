@@ -32,11 +32,23 @@ class MapViewController : UIViewController, MKMapViewDelegate {
         
         mapView.register(MKPinAnnotationView.self, forAnnotationViewWithReuseIdentifier: Constant.AnnotationReuseIdentifier)
         
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = CLLocationCoordinate2DMake(40, -111)
-        annotation.title = "Turner"
-        annotation.subtitle = "subtitle here"
-        mapView.addAnnotation(annotation)
+//        let annotation = MKPointAnnotation()
+//        annotation.coordinate = CLLocationCoordinate2DMake(40, -111)
+//        annotation.title = "Turner"
+//        annotation.subtitle = "subtitle here"
+//        mapView.addAnnotation(annotation)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+//        let camera = MKMapCamera(lookingAtCenter: CLLocationCoordinate2DMake(40, -111), fromEyeCoordinate: CLLocationCoordinate2DMake(40, -111), eyeAltitude: 500)
+//        mapView.setCamera(camera, animated: true)
+//
+//        let center = CLLocationCoordinate2DMake(40, -111)
+//        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+//        let viewRegion = MKCoordinateRegion(center: center, span: span)
+//        mapView.setRegion(viewRegion, animated: true)
     }
     
     // Mark - mapview delegate
@@ -49,5 +61,31 @@ class MapViewController : UIViewController, MKMapViewDelegate {
         }
         
         return view
+    }
+    
+    // Makr - helper
+    func configureMap(_ geoplaces: [GeoPlace]) {
+        var maxLatitude = 0.0
+        var minLatitude = 0.0
+        var maxLongitude = 0.0
+        var minLongitude = 0.0
+        
+        for place in geoplaces {
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = CLLocationCoordinate2DMake(place.latitude, place.longitude)
+            annotation.title = place.placename
+            annotation.subtitle = "subtitle"
+            mapView.addAnnotation(annotation)
+            
+            maxLatitude = maxLatitude < place.latitude ? place.latitude : maxLatitude
+            minLatitude = minLatitude > place.latitude ? place.latitude : minLatitude
+            maxLongitude = maxLongitude < place.longitude ? place.longitude : maxLongitude
+            minLongitude = minLongitude > place.longitude ? place.longitude : minLongitude
+        
+            let center = CLLocationCoordinate2DMake(place.latitude, place.longitude)
+            let span = MKCoordinateSpan(latitudeDelta: (maxLatitude - minLatitude), longitudeDelta: (maxLongitude - minLongitude))
+            let viewRegion = MKCoordinateRegion(center: center, span: span)
+            mapView.setRegion(viewRegion, animated: true)
+        }
     }
 }
