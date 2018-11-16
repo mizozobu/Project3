@@ -41,6 +41,7 @@ class BooksViewController : UITableViewController {
             if let scriptureVC = segue.destination as? ScripturesViewController {
                 if let book = sender as? Book {
                     scriptureVC.bookId = book.id
+                    scriptureVC.book = book.fullName
                     scriptureVC.chapter = 1
                 }
             }

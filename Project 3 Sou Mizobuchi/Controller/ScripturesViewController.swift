@@ -23,6 +23,7 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
     // Mark - view lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "\(book) Chapter \(chapter)"
         configureDetailViewController()
         
         let (html, geoplaces) = ScriptureRenderer.sharedRenderer.htmlForBookId(bookId, chapter: chapter)

@@ -43,7 +43,7 @@
             </objects>
             <point key="canvasLocation" x="1078" y="947"/>
         </scene>
-        <!--Scriptures-->
+        <!--Volumes-->
         <scene sceneID="UC5-Xn-kht">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="cOH-Sb-XEh" customClass="VolumesViewController" customModule="Project_3_Sou_Mizobuchi" customModuleProvider="target" sceneMemberID="viewController">
@@ -75,7 +75,7 @@
                             <outlet property="delegate" destination="cOH-Sb-XEh" id="8Ic-cV-nHt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Scriptures" id="YbI-9q-qfb">
+                    <navigationItem key="navigationItem" title="Volumes" id="YbI-9q-qfb">
                         <barButtonItem key="backBarButtonItem" title="Volumes" id="eyU-xu-hKb"/>
                     </navigationItem>
                     <connections>
@@ -115,10 +115,10 @@
             </objects>
             <point key="canvasLocation" x="-1159" y="-302"/>
         </scene>
-        <!--Books View Controller-->
+        <!--Books-->
         <scene sceneID="18r-q1-WlC">
             <objects>
-                <tableViewController id="kyy-Lb-Nwk" customClass="BooksViewController" customModule="Project_3_Sou_Mizobuchi" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Books" id="kyy-Lb-Nwk" customClass="BooksViewController" customModule="Project_3_Sou_Mizobuchi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9nu-Qf-jO7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,10 +156,10 @@
             </objects>
             <point key="canvasLocation" x="1423" y="-636"/>
         </scene>
-        <!--Chapters View Controller-->
+        <!--Chapters-->
         <scene sceneID="PFI-mO-tSz">
             <objects>
-                <tableViewController id="41Z-gG-911" customClass="ChaptersViewController" customModule="Project_3_Sou_Mizobuchi" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Chapters" id="41Z-gG-911" customClass="ChaptersViewController" customModule="Project_3_Sou_Mizobuchi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZO4-ej-gri">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -251,7 +251,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="oN5-YK-peq"/>
+        <segue reference="jsd-M3-V00"/>
         <segue reference="BUm-dN-o5n"/>
     </inferredMetricsTieBreakers>
 </document>
