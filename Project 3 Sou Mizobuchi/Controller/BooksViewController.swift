@@ -12,6 +12,7 @@ class BooksViewController : UITableViewController {
     
     private struct StoryBoard {
         static let BookCellIdentifier = "BookCell"
+        static let ShowChaptersSegueIdentifier = "ShowChapterList"
         static let ShowScripturesSegueIdentifier = "ShowChapterContent"
     }
     
@@ -25,6 +26,27 @@ class BooksViewController : UITableViewController {
         
         updateModel()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == StoryBoard.ShowChaptersSegueIdentifier {
+            if let chapterVC = segue.destination as? ChaptersViewController {
+                if let book = sender as? Book {
+                    chapterVC.bookId = book.id
+                    chapterVC.book = book.fullName
+                    chapterVC.numChapters = book.numChapters!
+                }
+            }
+        }
+        else if segue.identifier == StoryBoard.ShowScripturesSegueIdentifier {
+            if let scriptureVC = segue.destination as? ScripturesViewController {
+                if let book = sender as? Book {
+                    scriptureVC.bookId = book.id
+                    scriptureVC.chapter = 1
+                }
+            }
+        }
+    }
+
     
     // Mark - table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,7 +62,13 @@ class BooksViewController : UITableViewController {
     
     // Mark - table view delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: StoryBoard.ShowScripturesSegueIdentifier, sender: self)
+        let book = books[indexPath.row]
+        if book.numChapters == 1 {
+            performSegue(withIdentifier: StoryBoard.ShowScripturesSegueIdentifier, sender: book)
+        }
+        else {
+            performSegue(withIdentifier: StoryBoard.ShowChaptersSegueIdentifier, sender: book)
+        }
     }
     
     // Mark - helpers

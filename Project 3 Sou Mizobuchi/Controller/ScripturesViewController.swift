@@ -13,7 +13,7 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
     
     // Mark - properties
     var bookId = 101
-    var chapter = 2
+    var chapter = 1
     private weak var mapViewController: MapViewController?
     
     // Mark outlets
