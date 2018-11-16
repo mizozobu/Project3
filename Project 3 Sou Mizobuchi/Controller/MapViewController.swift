@@ -9,13 +9,15 @@
 import UIKit
 import MapKit
 
-class MapViewController : UIViewController, MKMapViewDelegate {
+class MapViewController : UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     // Mark - constatnt
     private struct Constant {
         static let AnnotationReuseIdentifier = "MapPin"
-        
     }
+    
+    // Mark - property
+    var locationManager = CLLocationManager()
     
     // Mark - outlet
     @IBOutlet weak var mapView: MKMapView!
@@ -28,6 +30,14 @@ class MapViewController : UIViewController, MKMapViewDelegate {
         if let splitVC = splitViewController {
             navigationItem.leftItemsSupplementBackButton = true
             navigationItem.leftBarButtonItem = splitVC.displayModeButtonItem
+        }
+        
+        // find current location
+        locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
         }
         
         mapView.register(MKPinAnnotationView.self, forAnnotationViewWithReuseIdentifier: Constant.AnnotationReuseIdentifier)
@@ -61,6 +71,16 @@ class MapViewController : UIViewController, MKMapViewDelegate {
         }
         
         return view
+    }
+    
+    // Mark - location manager delegate
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            let center = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+            let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+            let region = MKCoordinateRegion(center: center, span: span)
+            mapView.setRegion(region, animated: true)
+        }
     }
     
     // Makr - helper
