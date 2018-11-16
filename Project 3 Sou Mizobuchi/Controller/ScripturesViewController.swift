@@ -13,6 +13,7 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
     
     // Mark - properties
     var bookId = 101
+    var book = ""
     var chapter = 1
     private weak var mapViewController: MapViewController?
     
@@ -30,6 +31,7 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
         webView.loadHTMLString(html, baseURL: nil)
         
         if let mapVC = mapViewController {
+            mapVC.setTitle(book, chapter)
             mapVC.configureMap(geoplaces)
         }
     }

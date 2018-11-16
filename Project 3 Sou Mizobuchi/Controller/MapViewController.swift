@@ -67,6 +67,10 @@ class MapViewController : UIViewController, MKMapViewDelegate, CLLocationManager
     }
     
     // Makr - helper
+    func setTitle(_ book: String, _ chapter: Int) {
+        title = "\(book) Chapter \(chapter)"
+    }
+    
     func configureMap(_ geoplaces: [GeoPlace]) {
         mapView.removeAnnotations(mapView.annotations)
         
