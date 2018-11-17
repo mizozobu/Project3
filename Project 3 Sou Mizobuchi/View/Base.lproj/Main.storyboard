@@ -212,24 +212,37 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ipp-7G-e3v">
+                                <rect key="frame" x="329" y="613.5" width="30" height="37.5"/>
+                                <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ipp-7G-e3v" secondAttribute="height" multiplier="40:50" id="cfE-sA-faw"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="map"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="QNP-qv-sVj" firstAttribute="top" secondItem="xlQ-aR-uWT" secondAttribute="top" id="ISd-08-RNc"/>
                             <constraint firstItem="QNP-qv-sVj" firstAttribute="leading" secondItem="xlQ-aR-uWT" secondAttribute="leading" id="LJc-5T-Har"/>
+                            <constraint firstItem="Ipp-7G-e3v" firstAttribute="leading" secondItem="QNP-qv-sVj" secondAttribute="trailing" constant="-46" id="M8y-S7-d2M"/>
+                            <constraint firstItem="xlQ-aR-uWT" firstAttribute="bottom" secondItem="Ipp-7G-e3v" secondAttribute="bottom" constant="16" id="cnJ-JY-S2d"/>
+                            <constraint firstItem="xlQ-aR-uWT" firstAttribute="trailing" secondItem="Ipp-7G-e3v" secondAttribute="trailing" constant="16" id="izC-in-Mgg"/>
                             <constraint firstItem="xlQ-aR-uWT" firstAttribute="bottom" secondItem="QNP-qv-sVj" secondAttribute="bottom" id="x3u-UE-KkP"/>
                             <constraint firstItem="xlQ-aR-uWT" firstAttribute="trailing" secondItem="QNP-qv-sVj" secondAttribute="trailing" id="xrr-N7-0vH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xlQ-aR-uWT"/>
                     </view>
                     <connections>
+                        <outlet property="mapBtn" destination="Ipp-7G-e3v" id="pcb-IH-b4z"/>
                         <outlet property="webView" destination="QNP-qv-sVj" id="rV8-0B-2rg"/>
                         <segue destination="keA-5s-sHC" kind="showDetail" identifier="ShowMap" id="jsd-M3-V00"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1NB-bw-mNX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2262" y="223"/>
+            <point key="canvasLocation" x="2261.5999999999999" y="222.63868065967017"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wEf-ho-3Fn">
@@ -250,6 +263,9 @@
             <point key="canvasLocation" x="260" y="947"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="map" width="384" height="512"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="jsd-M3-V00"/>
         <segue reference="BUm-dN-o5n"/>

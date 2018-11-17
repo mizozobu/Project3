@@ -19,10 +19,12 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
     
     // Mark outlets
     @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var mapBtn: UIButton!
     
     // Mark - view lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = "\(book) Chapter \(chapter)"
         configureDetailViewController()
         
@@ -40,6 +42,13 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         configureDetailViewController()
+        
+        if mapViewController != nil {
+            mapBtn.isHidden = true
+        }
+        else {
+            mapBtn.isHidden = false
+        }
     }
     
     // Mark - webkit delegate
