@@ -11,10 +11,16 @@ import WebKit
 
 class ScripturesViewController : UIViewController, WKNavigationDelegate {
     
+    // Mark -
+    private struct StoryBoard {
+        static let ShowMapSegueIdentifier = "ShowMap"
+    }
+    
     // Mark - properties
     var bookId = 101
     var book = ""
     var chapter = 1
+    var geoplaces = [GeoPlace]()
     private weak var mapViewController: MapViewController?
     
     // Mark outlets
@@ -28,7 +34,8 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
         title = "\(book) Chapter \(chapter)"
         configureDetailViewController()
         
-        let (html, geoplaces) = ScriptureRenderer.sharedRenderer.htmlForBookId(bookId, chapter: chapter)
+        let (html, gps) = ScriptureRenderer.sharedRenderer.htmlForBookId(bookId, chapter: chapter)
+        geoplaces = gps
         
         webView.navigationDelegate = self
         webView.loadHTMLString(html, baseURL: nil)
@@ -48,6 +55,14 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
         }
         else {
             mapBtn.isHidden = false
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == StoryBoard.ShowMapSegueIdentifier {
+            if let mapVC = segue.destination as? MapViewController {
+                mapVC.geoplaces = geoplaces
+            }
         }
     }
     

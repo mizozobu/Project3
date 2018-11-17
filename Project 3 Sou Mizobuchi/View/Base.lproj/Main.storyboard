@@ -220,6 +220,9 @@
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" backgroundImage="map"/>
+                                <connections>
+                                    <segue destination="keA-5s-sHC" kind="showDetail" identifier="ShowMap" id="SFq-sl-blU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

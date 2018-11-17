@@ -19,6 +19,7 @@ class MapViewController : UIViewController, MKMapViewDelegate, CLLocationManager
     
     // Mark - property
     var locationManager = CLLocationManager()
+    var geoplaces = [GeoPlace]()
     
     // Mark - outlet
     @IBOutlet weak var mapView: MKMapView!
@@ -42,6 +43,10 @@ class MapViewController : UIViewController, MKMapViewDelegate, CLLocationManager
         }
         
         mapView.register(MKPinAnnotationView.self, forAnnotationViewWithReuseIdentifier: Constant.AnnotationReuseIdentifier)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        configureMap(geoplaces)
     }
     
     // Mark - mapview delegate
