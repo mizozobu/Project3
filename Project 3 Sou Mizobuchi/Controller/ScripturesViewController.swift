@@ -46,22 +46,41 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
         }
     }
     
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//        configureDetailViewController()
+//
+//        if mapViewController != nil {
+//            mapBtn.isHidden = true
+//        }
+//        else {
+//            mapBtn.isHidden = false
+//        }
+//    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         configureDetailViewController()
         
-        if mapViewController != nil {
-            mapBtn.isHidden = true
+        if splitViewController == nil {
+            mapBtn.isHidden = false
         }
         else {
-            mapBtn.isHidden = false
+            let controller = splitViewController?.viewControllers.first
+            if let navVC = controller as? UINavigationController {
+                if let scriptureVC = navVC.viewControllers.first as? ScripturesViewController {
+                    mapBtn.isHidden = true
+                }
+            }
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == StoryBoard.ShowMapSegueIdentifier {
-            if let mapVC = segue.destination as? MapViewController {
-                mapVC.geoplaces = geoplaces
+            if let navVC = segue.destination as? UINavigationController {
+                if let mapVC = navVC.viewControllers.first as? MapViewController {
+                    mapVC.geoplaces = geoplaces
+                }
             }
         }
     }

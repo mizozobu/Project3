@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     private struct StoryBoard {
         static let MainStoryBoardName = "Main"
         static let MapVCIdentifier = "DetailVC"
+        static let ScriptureVCIdentifier = "ScriptureVC"
     }
 
     var window: UIWindow?
@@ -33,15 +34,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     }
     
     func splitViewController(_ splitViewController: UISplitViewController, separateSecondaryFrom primaryViewController: UIViewController) -> UIViewController? {
+        var scriptureVC = ScripturesViewController()
         if let navVC = primaryViewController as? UINavigationController {
             for controller in navVC.viewControllers {
                 if controller.restorationIdentifier == StoryBoard.MapVCIdentifier {
                     return controller
                 }
+                else if controller.restorationIdentifier == StoryBoard.ScriptureVCIdentifier {
+                    if let scriptureViewController = controller as? ScripturesViewController {
+                        scriptureVC = scriptureViewController
+                    }
+                }
             }
         }
+        
         let storyboard = UIStoryboard(name: StoryBoard.MainStoryBoardName, bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: StoryBoard.MapVCIdentifier)
+        var mapViewController = storyboard.instantiateViewController(withIdentifier: StoryBoard.MapVCIdentifier)
+        if let mapVC = mapViewController as? MapViewController {
+            mapVC.geoplaces = scriptureVC.geoplaces
+            mapVC.setTitle(scriptureVC.book, scriptureVC.chapter)
+            mapViewController = mapVC
+        }
+        
+        return mapViewController
     }
 }
 
