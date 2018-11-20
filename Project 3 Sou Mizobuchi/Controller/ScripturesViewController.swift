@@ -21,7 +21,7 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
     var book = ""
     var chapter = 1
     var geoplaces = [GeoPlace]()
-    private weak var mapViewController: MapViewController?
+    weak var mapViewController: MapViewController?
     
     // Mark outlets
     @IBOutlet weak var webView: WKWebView!
@@ -57,23 +57,6 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
             mapBtn.isHidden = false
         }
     }
-    
-//    override func viewDidLayoutSubviews() {
-//        super.viewDidLayoutSubviews()
-//        configureDetailViewController()
-//
-//        if splitViewController == nil {
-//            mapBtn.isHidden = false
-//        }
-//        else {
-//            let controller = splitViewController?.viewControllers.first
-//            if let navVC = controller as? UINavigationController {
-//                if let scriptureVC = navVC.viewControllers.first as? ScripturesViewController {
-//                    mapBtn.isHidden = true
-//                }
-//            }
-//        }
-//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == StoryBoard.ShowMapSegueIdentifier {

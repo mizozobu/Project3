@@ -30,6 +30,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     }
     
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        if let navVC = primaryViewController as? UINavigationController {
+            for controller in navVC.viewControllers {
+                if controller.restorationIdentifier == StoryBoard.ScriptureVCIdentifier {
+                   if let scriptureVC = controller as? ScripturesViewController {
+                        scriptureVC.mapViewController = nil
+                    }
+                }
+            }
+        }
+        
         return true
     }
     
@@ -55,7 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
             mapVC.setTitle(scriptureVC.book, scriptureVC.chapter)
             mapViewController = mapVC
         }
-        
+        scriptureVC.mapViewController = mapViewController as? MapViewController
         return mapViewController
     }
 }
