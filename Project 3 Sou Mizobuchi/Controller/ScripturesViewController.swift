@@ -41,13 +41,16 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
         webView.loadHTMLString(html, baseURL: nil)
         
         if let mapVC = mapViewController {
-            mapVC.setTitle(book, chapter)
+            mapVC.book = book
+            mapVC.chapter = chapter
+            mapVC.setTitle()
             mapVC.configureMap(geoplaces)
         }
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
         configureDetailViewController()
 
         if mapViewController != nil {
@@ -60,8 +63,12 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == StoryBoard.ShowMapSegueIdentifier {
-            if let mapVC = segue.destination as? MapViewController {
-                mapVC.geoplaces = geoplaces
+            if let navVC = segue.destination as? UINavigationController {
+                if let mapVC = navVC.viewControllers.first as? MapViewController {
+                    mapVC.geoplaces = geoplaces
+                    mapVC.book = book
+                    mapVC.chapter = chapter
+                }
             }
         }
     }

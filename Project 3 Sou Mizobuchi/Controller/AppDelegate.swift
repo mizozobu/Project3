@@ -62,10 +62,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         var mapViewController = storyboard.instantiateViewController(withIdentifier: StoryBoard.MapVCIdentifier)
         if let mapVC = mapViewController as? MapViewController {
             mapVC.geoplaces = scriptureVC.geoplaces
-            mapVC.setTitle(scriptureVC.book, scriptureVC.chapter)
+            mapVC.setTitle()
             mapViewController = mapVC
         }
+        
         scriptureVC.mapViewController = mapViewController as? MapViewController
+        
         return mapViewController
     }
 }

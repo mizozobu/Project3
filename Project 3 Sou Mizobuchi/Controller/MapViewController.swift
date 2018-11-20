@@ -20,6 +20,8 @@ class MapViewController : UIViewController, MKMapViewDelegate, CLLocationManager
     // Mark - property
     var locationManager = CLLocationManager()
     var geoplaces = [GeoPlace]()
+    var book = ""
+    var chapter = 0
     
     // Mark - outlet
     @IBOutlet weak var mapView: MKMapView!
@@ -46,6 +48,13 @@ class MapViewController : UIViewController, MKMapViewDelegate, CLLocationManager
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if let splitVC = splitViewController {         
+            navigationItem.leftItemsSupplementBackButton = true
+            navigationItem.leftBarButtonItem = splitVC.displayModeButtonItem
+        }
+        setTitle()
         configureMap(geoplaces)
     }
     
@@ -86,8 +95,10 @@ class MapViewController : UIViewController, MKMapViewDelegate, CLLocationManager
     }
     
     // Makr - helper
-    func setTitle(_ book: String, _ chapter: Int) {
-        title = "\(book) Chapter \(chapter)"
+    func setTitle() {
+        if book != "" && chapter != 0 {
+            title = "\(book) Chapter \(chapter)"
+        }
     }
     
     func configureMap(_ geoplaces: [GeoPlace]) {
