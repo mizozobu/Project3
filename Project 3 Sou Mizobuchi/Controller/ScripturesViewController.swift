@@ -77,10 +77,8 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == StoryBoard.ShowMapSegueIdentifier {
-            if let navVC = segue.destination as? UINavigationController {
-                if let mapVC = navVC.viewControllers.first as? MapViewController {
-                    mapVC.geoplaces = geoplaces
-                }
+            if let mapVC = segue.destination as? MapViewController {
+                mapVC.geoplaces = geoplaces
             }
         }
     }

@@ -221,7 +221,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" backgroundImage="map"/>
                                 <connections>
-                                    <segue destination="keA-5s-sHC" kind="showDetail" identifier="ShowMap" id="SFq-sl-blU"/>
+                                    <segue destination="aqc-Jf-LrW" kind="showDetail" identifier="ShowMap" id="ISA-yU-uNb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -272,5 +272,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="jsd-M3-V00"/>
         <segue reference="BUm-dN-o5n"/>
+        <segue reference="ISA-yU-uNb"/>
     </inferredMetricsTieBreakers>
 </document>
