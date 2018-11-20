@@ -73,13 +73,15 @@ class MapViewController : UIViewController, MKMapViewDelegate, CLLocationManager
 
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         if let pin = view.annotation {
-            let geoplace = GeoDatabase.sharedGeoDatabase.geoPlaceForId(Int((pin.subtitle!)!)!)
-            let eyeCoordinate = CLLocationCoordinate2D(latitude: (geoplace?.latitude)!, longitude: (geoplace?.longitude)!)
-            let mapCamera = MKMapCamera(lookingAtCenter: eyeCoordinate, fromEyeCoordinate: eyeCoordinate, eyeAltitude: (geoplace?.viewAltitude)!)
-            
-            mapView.setCamera(mapCamera, animated: true)
-            
-            title = pin.title!
+            if !(pin is MKUserLocation) {
+                let geoplace = GeoDatabase.sharedGeoDatabase.geoPlaceForId(Int((pin.subtitle!)!)!)
+                let eyeCoordinate = CLLocationCoordinate2D(latitude: (geoplace?.latitude)!, longitude: (geoplace?.longitude)!)
+                let mapCamera = MKMapCamera(lookingAtCenter: eyeCoordinate, fromEyeCoordinate: eyeCoordinate, eyeAltitude: (geoplace?.viewAltitude)!)
+                
+                mapView.setCamera(mapCamera, animated: true)
+                
+                title = pin.title!
+            }
         }
     }
     
