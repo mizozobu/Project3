@@ -81,13 +81,7 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
                 if let geoplaceId = Int(path.substring(fromOffset: baseUrl.count)) {
                     print(geoplaceId)
                 }
-                
-                if mapViewController == nil {
-                    //a
-                }
-                else {
-                    //a
-                }
+
                 decisionHandler(.cancel)
                 return
             }
