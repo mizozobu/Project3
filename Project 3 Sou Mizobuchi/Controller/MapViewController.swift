@@ -70,6 +70,18 @@ class MapViewController : UIViewController, MKMapViewDelegate, CLLocationManager
             mapView.setRegion(region, animated: true)
         }
     }
+
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        if let pin = view.annotation {
+            let geoplace = GeoDatabase.sharedGeoDatabase.geoPlaceForId(Int((pin.subtitle!)!)!)
+            let eyeCoordinate = CLLocationCoordinate2D(latitude: (geoplace?.latitude)!, longitude: (geoplace?.longitude)!)
+            let mapCamera = MKMapCamera(lookingAtCenter: eyeCoordinate, fromEyeCoordinate: eyeCoordinate, eyeAltitude: (geoplace?.viewAltitude)!)
+            
+            mapView.setCamera(mapCamera, animated: true)
+            
+            title = pin.title!
+        }
+    }
     
     // Makr - helper
     func setTitle(_ book: String, _ chapter: Int) {
@@ -84,7 +96,7 @@ class MapViewController : UIViewController, MKMapViewDelegate, CLLocationManager
             let annotation = MKPointAnnotation()
             annotation.coordinate = CLLocationCoordinate2DMake(place.latitude, place.longitude)
             annotation.title = place.placename
-            annotation.subtitle = "subtitle"
+            annotation.subtitle = "\(place.id)"
             mapView.addAnnotation(annotation)
             
             let annotationPoint = MKMapPoint(annotation.coordinate);
